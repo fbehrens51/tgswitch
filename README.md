@@ -19,9 +19,9 @@ export TGENV_REMOTE="https://my-endpoint.example.com/terragrunt-releases"
 Required file structure at that endpoint:
 ```
 |_versions.json
-|_v0.46.1/
+|_v1.1.0/
   |_terragrunt_linux_amd64
-|_v0.48.0/
+|_v1.1.1/
   |_terragrunt_linux_amd64
 ```
 Note: `tgswitch VERSION` works as expected against a custom endpoint.

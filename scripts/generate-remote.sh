@@ -10,7 +10,7 @@
 # (S3, GCS, an internal artifact repo, a plain static file server, ...).
 #
 # Usage:
-#   VERSIONS="0.48.0 0.48.1 0.49.0" ./generate-remote.sh [output_dir]
+#   VERSIONS="1.1.0 1.1.1" ./generate-remote.sh [output_dir]
 #
 # Env vars:
 #   VERSIONS  Required. Space-separated terragrunt versions to mirror (no "v" prefix).
@@ -30,7 +30,7 @@ OUT_DIR="${1:-terragrunt-releases}"
 
 if [[ -z "${VERSIONS:-}" ]]; then
   echo "Set VERSIONS to a space-separated list of terragrunt versions to mirror, e.g.:" >&2
-  echo "  VERSIONS=\"0.48.0 0.48.1\" $0" >&2
+  echo "  VERSIONS=\"1.1.0 1.1.1\" $0" >&2
   exit 1
 fi
 
