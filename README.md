@@ -4,6 +4,22 @@
 
 # Terragrunt Switcher 
 
+## Directions for use in region
+- define TGENV_REMOTE to use a remote repo
+```
+export TGENV_REMOTE="https://S3_BUCKET.s3.amazonaws.com/terragrunt-releases
+
+```
+- File structure required for TGENV_REMOTE 
+``` 
+|_versions.json  
+|_v0.46.1/  
+  |_terragrunt_linux_amd64
+|_v0.48.0/  
+  |_terragrunt_linux_amd64
+```
+Note: tgswitch VERSION works as desired
+
 <img style="text-allign:center" src="https://kepler-images.s3.us-east-2.amazonaws.com/warrensbox/tgswitch/tgswitch-banner.png" alt="drawing"/>
 
 
