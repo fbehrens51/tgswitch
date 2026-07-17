@@ -4,21 +4,27 @@
 
 # Terragrunt Switcher 
 
-## Directions for use in region
-- define TGENV_REMOTE to use a remote repo
-```
-export TGENV_REMOTE="https://S3_BUCKET.s3.amazonaws.com/terragrunt-releases
+## Use a custom terragrunt release location
+By default, `tgswitch` reads the version list and downloads binaries from the public
+[terragrunt release page](https://github.com/gruntwork-io/terragrunt/releases) (via a
+[proxy list](https://warrensbox.github.io/terragunt-versions-list/)). To instead serve
+these from your own location, set `TGENV_REMOTE` to any HTTP(S) endpoint that exposes
+the file structure below — an S3 bucket, GCS bucket, internal artifact repository, or a
+plain static file server all work, as long as they're reachable over HTTP(S):
 
 ```
-- File structure required for TGENV_REMOTE 
-``` 
-|_versions.json  
-|_v0.46.1/  
+export TGENV_REMOTE="https://my-endpoint.example.com/terragrunt-releases"
+```
+
+Required file structure at that endpoint:
+```
+|_versions.json
+|_v0.46.1/
   |_terragrunt_linux_amd64
-|_v0.48.0/  
+|_v0.48.0/
   |_terragrunt_linux_amd64
 ```
-Note: tgswitch VERSION works as desired
+Note: `tgswitch VERSION` works as expected against a custom endpoint.
 
 <img style="text-allign:center" src="https://kepler-images.s3.us-east-2.amazonaws.com/warrensbox/tgswitch/tgswitch-banner.png" alt="drawing"/>
 
