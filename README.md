@@ -26,6 +26,9 @@ Required file structure at that endpoint:
 ```
 Note: `tgswitch VERSION` works as expected against a custom endpoint.
 
+See [`scripts/generate-remote.sh`](scripts/generate-remote.sh) for a reference script
+that mirrors terragrunt releases into this layout, ready to upload to your endpoint.
+
 <img style="text-allign:center" src="https://kepler-images.s3.us-east-2.amazonaws.com/warrensbox/tgswitch/tgswitch-banner.png" alt="drawing"/>
 
 
